@@ -6,7 +6,7 @@
 
 - HTML 的發展
 
-  ![HTML History](./img/html_history.png)
+  <img src="./img/html_history.png" href="HTML History" width="500">
 
 - HTML5
 
@@ -18,7 +18,7 @@
 
 - 大多由以下三個部分組成
 
-  ![HTML Tag](./img/html_tag.png)
+  <img src="./img/html_tag.png" href="HTML Tag" width="500">
 
   - Ex. `<html></html>`、`<p></p>`、`<h1></h1>`
 
@@ -34,7 +34,7 @@
 
 - 語法如下
 
-  ![HTML Attr](./img/html_attr.png)
+  <img src="./img/html_attr.png" href="HTML Attr" width="500">
 
   Ex. `<h2 id="heading" title="apple!">APPLE</h2>`
 
@@ -42,7 +42,7 @@
 
 - HTML 基本架構
 
-  ![HTML Structure](./img/html_structure.png)
+  <img src="./img/html_structure.png" href="HTML Structure" width="500">
 
 - `<DOCTYPE>`
 
@@ -52,7 +52,13 @@
 
   - HTML4 有三種寫法
 
-    ![HTML Doctype](./img/html4_doctype.png)
+    ```html
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+    ```
 
   - HTML5 統一使用 `<!DOCTYPE html>`
 
@@ -62,23 +68,49 @@
 
   - 支援 `lang` 屬性，用來定義文件使用的語言，可以幫助搜尋引擎 & 瀏覽器做辨識
 
-    ![HTML lang](./img/html_lang.png)
+    ```html
+    <!-- 表示網頁的語言是使用台灣的繁體中文 -->
+    <html lang="zh-Hant-TW"></html>
+    ```
 
     `zh` - 中文 / `Hant` - 字體 / `TW` - 地區
 
 - `<head>`
 
-  ![HTML Head](./img/html_head.png)
+  ```html
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example document</title>
+    <style>
+      /* Write CSS  here */
+    </style>
+    <script>
+      // JavaScript code
+    </script>
+  </head>
+  ```
 
   - 用來放一些描述網頁的資料 ( metadata )，元素裡的內容 ( 除了 title 以外 ) 不會顯示在網頁上
 
   - `title` - 網頁文件的標題，會出現在瀏覽器標籤左上角 ( 只能有一個 )
 
-    ![HTML Title](./img/html_title.png)
+    <img src="./img/html_title.png" href="HTML Title" width="500">
 
   - `meta` - 描述 HTML 問見資訊，內容由 `name` & `content` 屬性來決定 ( 對 SEO 非常重要 )
 
-    ![HTML Meta](./img/html_meta.png)
+    ```html
+    <head>
+      <meta charset="utf-8" />
+      <title>HTML 教學網</title>
+      <meta name="author" content="sherman" />
+      <meta name="keywords" content="HTML,CSS,JavaScript" />
+      <meta name="date" content="2023/2/28" />
+      <meta name="description" content="HTML 教學網站" />
+      <meta name="generator" content="Microsoft Expression Web" />
+      <meta http-equiv="Refresh" content="300" />
+      <meta http-equiv="Refresh" content="20; url=http://tw.yahoo.com" />
+    </head>
+    ```
 
     `charset` - 定義網頁的字元編碼方式
 
