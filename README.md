@@ -4,8 +4,8 @@
 
 1. HTML
 2. CSS
-3. Git
-4. HTML + CSS Practices 💕💕
+3. HTML + CSS Practices 💕💕
+4. Git
 5. JavaScript
 6. Algorithm & Data Structures
 7. HTML + CSS + JavaScript Practices 💕💕
