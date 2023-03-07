@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 960px;
+      }
+
+      .boxes {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .boxes li {
+        float: left;
+        width: 225px;
+        height: 160px;
+        margin-bottom: 20px;
+
+        background-color: #000;
+      }
+
+      .boxes li:not(:nth-child(4n)) {
+        margin-right: 20px;
+      }
+
+      .footer,
+      .header {
+        height: 20px;
+        margin: 10px 0;
+        background-color: bisque;
+      }
+
+      .footer {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+
+      <ul class="boxes">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
