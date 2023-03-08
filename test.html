@@ -10,6 +10,12 @@
         width: 960px;
       }
 
+      .boxes::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
       .boxes {
         margin: 0;
         padding: 0;
@@ -39,6 +45,15 @@
       .footer {
         clear: both;
       }
+
+      .position {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        background-color: aqua;
+      }
     </style>
   </head>
   <body>
@@ -57,6 +72,7 @@
         <li></li>
       </ul>
 
+      <div class="position"></div>
       <div class="footer"></div>
     </div>
   </body>
