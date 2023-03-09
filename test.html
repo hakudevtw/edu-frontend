@@ -5,75 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
       .container {
-        width: 960px;
+        display: flex;
       }
 
-      .boxes::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-
-      .boxes {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .boxes li {
-        float: left;
-        width: 225px;
-        height: 160px;
-        margin-bottom: 20px;
-
+      .box {
+        margin: 20px;
+        width: 50px;
         background-color: #000;
       }
 
-      .boxes li:not(:nth-child(4n)) {
-        margin-right: 20px;
+      .box:nth-child(1) {
+        height: 50px;
       }
 
-      .footer,
-      .header {
+      .box:nth-child(2) {
         height: 20px;
-        margin: 10px 0;
-        background-color: bisque;
-      }
-
-      .footer {
-        clear: both;
-      }
-
-      .position {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 80px;
-        height: 80px;
-        background-color: aqua;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="header"></div>
-
-      <ul class="boxes">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-
-      <div class="position"></div>
-      <div class="footer"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
     </div>
   </body>
 </html>
