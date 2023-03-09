@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-      
-      
+
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .box {
+        margin: 20px;
+        width: 50px;
+        background-color: #000;
+      }
+
+      .box:nth-child(1) {
+        height: 50px;
+      }
+
+      .box:nth-child(2) {
+        height: 20px;
+      }
+    </style>
   </head>
   <body>
-    <p data-title="hello">Hello</p>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
   </body>
 </html>
