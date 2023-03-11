@@ -7,27 +7,27 @@
     <title>Document</title>
 
     <style>
-      .container {
+      .flex-box {
         display: flex;
+        width: 840px;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #000;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
 
       .box {
-        margin: 20px;
-        width: 50px;
-        background-color: #000;
-      }
-
-      .box:nth-child(1) {
-        height: 50px;
-      }
-
-      .box:nth-child(2) {
-        height: 20px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="flex-box">
+      <div class="box"></div>
+      <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
