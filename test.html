@@ -7,30 +7,51 @@
     <title>Document</title>
 
     <style>
-      .flex-box {
-        display: flex;
-        width: 840px;
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-columns: 200px 1fr 200px;
+
+        grid-template-areas:
+          "header header header"
+          "side1 main side2"
+          "footer footer footer";
+
         gap: 10px;
-        padding: 10px;
-        border: 1px solid #000;
-        justify-content: space-between;
-        flex-wrap: wrap;
       }
 
-      .box {
-        width: 200px;
-        height: 200px;
-        border: 1px solid #000;
+      .header {
+        grid-area: header;
+        background-color: antiquewhite;
+      }
+
+      .side1 {
+        grid-area: side1;
+        background-color: rgb(167, 221, 252);
+      }
+      .side2 {
+        grid-area: side2;
+        background-color: rgb(173, 168, 252);
+      }
+      .main {
+        grid-area: main;
+        background-color: rgb(238, 193, 230);
+      }
+      .footer {
+        grid-area: footer;
+        background-color: #d5ffcf;
       }
     </style>
   </head>
   <body>
-    <div class="flex-box">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
+    <div class="container">
+      <header class="header"></header>
+      <main class="main"></main>
+      <aside class="side1"></aside>
+      <aside class="side2"></aside>
+      <footer class="footer"></footer>
     </div>
   </body>
 </html>
