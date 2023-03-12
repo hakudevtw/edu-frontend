@@ -33,3 +33,5 @@
 - [freeCodeCamp.org](https://www.youtube.com/@freecodecamp) - 免費教學資源
 - [Online Tutorials](https://www.youtube.com/@OnlineTutorialsYT) - HTML/CSS/JavaScript 效果
 - [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) - 專案實作
+- [CS50 Git](https://www.youtube.com/watch?v=NcoBAfJ6l2Q&list=RDCMUCcabW7890RKJzL968QWEykA&start_radio=1&rv=NcoBAfJ6l2Q&t=551) Git 教學
+- [CS50 2022](https://www.youtube.com/playlist?list=PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4) - Computer Science
