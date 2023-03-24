@@ -7,6 +7,15 @@
     <title>Document</title>
 
     <style>
+      :root {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 1.6rem;
+        color: var(--font-color);
+      }
+
       .container {
         width: 100%;
         min-height: 100vh;
@@ -25,27 +34,59 @@
       .header {
         grid-area: header;
         background-color: antiquewhite;
+        box-shadow: var(--shadow);
       }
 
       .side1 {
+        --shadow: 5px 5px 10px #000;
+
         grid-area: side1;
         background-color: rgb(167, 221, 252);
+        box-shadow: var(--shadow);
       }
       .side2 {
         grid-area: side2;
         background-color: rgb(173, 168, 252);
+        box-shadow: var(--shadow);
       }
       .main {
         grid-area: main;
         background-color: rgb(238, 193, 230);
+        box-shadow: var(--shadow);
       }
       .footer {
         grid-area: footer;
         background-color: #d5ffcf;
       }
+
+      .wrapper {
+        margin-top: 20px;
+        background-color: beige;
+        border: 1px solid #000;
+      }
+
+      .wrapper > .box {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        background-color: #000;
+        transform: scale(var(--color));
+      }
     </style>
   </head>
   <body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sint
+    recusandae nihil debitis expedita at ipsam. Error obcaecati, ut non
+    doloremque impedit nihil, assumenda cupiditate dolore beatae quas repellat
+    velit.
+    <div class="wrapper">
+      <div class="box" style="--color: 1"></div>
+      <div class="box" style="--color: 2"></div>
+      <div class="box" style="--color: 3"></div>
+      <div class="box" style="--color: 4"></div>
+      <div class="box" style="--color: 5"></div>
+    </div>
+
     <div class="container">
       <header class="header"></header>
       <main class="main"></main>
@@ -53,5 +94,12 @@
       <aside class="side2"></aside>
       <footer class="footer"></footer>
     </div>
+
+    <ruby>
+      肉燥飯
+      <rp>(</rp>
+      <rt>ㄖㄡˋㄙㄠˋㄈㄢˋ</rt>
+      <rp>)</rp>
+    </ruby>
   </body>
 </html>
