@@ -2,6 +2,14 @@
 
 ## position 練習
 
+- [wofa store](https://wofa.shop-pro.jp/?mode=grp&gid=2655714&sort=n)
+
+- [Pasco](https://www.pasconet.co.jp/choujuku_art/recipe/01.html)
+
+- [FruOats（フルオーツ）](https://shop.fruoats.jp/)
+
+- [Featured Projects 2023](https://www.featuredprojects.jp/)
+
 ## flex 練習
 
 - 二欄位
