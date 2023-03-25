@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+     *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+
+     body{
+         min-height: 100vh;
+         padding: 30px;
+         background-color:black;
+     }
+
+     .header{ 
+         height: 80px;
+         margin-bottom: 30px;
+         background-color: #555;
+     }
+
+     .left{
+         float: left;
+
+         width: 40%;
+         height: 300px;
+         margin-bottom: 30px;
+         background-color: rgb(142, 168, 218);
+     }
+
+     .right{
+         float: right;
+         width: 40%;
+         height: 300px;
+         margin-bottom: 30px;
+         background-color: rgb(245, 124, 124);
+     }
+
+     .footer{
+         height: 80px;
+         background-color: rgb(163, 216, 215);
+     }
+
+     .clearfix{
+         clear: both;
+         /* 第一個方法  目的是消除left right後面的圍繞圖，所以加可加在footer上，或在left right後面另外再寫一個div，把clearfix加在上面 */
+     }
+     
+     .clearfix::after{
+         content: "";
+         display: block;
+         clear: both;
+         /* 取代第一個方式造成額外的不必要: 跟footer又沒關係;再多寫一個div很多餘，所以在main上做偽元素。 */
+     }
+    </style>
+</head>
+<body>
+    
+    <header class="header"></header>
+    <main class="clearfix">
+        <!-- 加偽類在main上 before的位置 -->
+        <div class="left"></div> 
+        <div class="right"></div>
+        <!-- 加偽類在main上 after的位置 -->
+    </main>
+    <footer class="footer"></footer>
+    
+    
+</body>
+</html> 

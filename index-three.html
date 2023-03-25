@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+   
+        body{
+            min-height: 100vh;
+            padding: 30px;
+            background-color:black;
+        }
+   
+        .header{ 
+            height: 80px;
+            margin-bottom: 30px;
+            background-color: #555;
+        }
+   
+        .col-3 > div {
+            width:calc((100% - 60px) / 3) ;
+
+        }
+        /* .col-3 > div:not(:last-child){
+            margin-right: 30px;
+        } */
+
+        .col-3 > div:not(:nth-child(3n)){
+            margin-right: 30px;
+        }
+
+        .left{
+            float: left;
+            height: 300px;
+            margin-bottom: 30px;
+            background-color: rgb(142, 168, 218);
+        }
+   
+        .middle{
+            float: left;
+            height: 300px;
+            margin-bottom: 30px;
+            background-color: rgb(218, 192, 110);
+        }
+
+    
+        .right{
+            float: left;
+            height: 300px;
+            margin-bottom: 30px;
+            background-color: rgb(245, 124, 124);
+        }
+
+        .box{
+            float: left;
+            height: 300px;
+            margin-bottom: 30px;
+            background-color: rgb(245, 124, 124);
+        }
+   
+   
+        .footer{
+            height: 80px;
+            background-color: rgb(163, 216, 215);
+        }
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+   
+    </style>
+</head>
+<body>
+    <header class="header"></header>
+    <main class="col-3 clearfix">
+        <div class="left"></div> 
+        <div class="middle"></div>
+        <div class="right"></div>
+        <div class="box"></div>
+    </main>
+    <footer class="footer"></footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(131, 172, 170);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.navigation > ul{
+    /* padding: 25px; */
+    height: 70px;
+    list-style: none;
+}
+
+
+.navigation > ul > li{
+    height: 100%;
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.navigation > ul > li >a{
+    /* height: 70px; */
+    line-height: 70px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    background-color: aliceblue;
+}
+.main-header > .logo {
+    margin: 10px;
+    float: left; 
+  
+}
+
+main{
+    height: 1700px;
+    margin: 50px;
+}
+
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.radius{
+    border-radius: 5%;
+}
+
+.card{
+    width: calc((100% - 45px)/4);
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: rgb(160, 191, 202);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:nth-child(4n){
+    margin-right: 0px;
+}
+
+.img{
+    padding-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main > div > p{
+    margin: 10px;
+}
+
+.new{
+    width: 200px; 
+    height: 25px;
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(90, 87, 131);
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 0px;
+    left: -80px;
+}
+
+button{
+    margin: 20px;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    background-color: rgb(135, 213, 192);
+    border: solid 1px;
+    display: inline-block;
+}
