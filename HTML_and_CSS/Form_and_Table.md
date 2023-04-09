@@ -128,6 +128,8 @@
 
 ## Form
 
+- `form` - 用來包住所有表單元素 Ex. `<input>`、`<select>`
+
 - 用 `fieldset` + `legend` 讓表單結構更為完善
 
   ```html
