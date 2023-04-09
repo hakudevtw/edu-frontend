@@ -132,6 +132,8 @@
 
   > 預設情況下，表單會在裡面的 `<button>` 被點擊時做提交
 
+  - `id` - 定義表單名稱，常搭配 JavaScript 使用取得 `{name: value}`
+
   - `action` ( url ) - 決定表單被提交到的目的地 ( Server )
 
     > 沒有設置時，會預設為當前頁面
@@ -191,6 +193,8 @@
 - [Form Elements W3C](https://www.w3schools.com/html/html_form_elements.asp)
 
 - [`<input>`](https://www.w3schools.com/tags/tag_input.asp)
+
+  > 部分較新的欄位，若瀏覽器不支援，會顯示 `type="text"`
 
   | Element          | Definition                                         | Sample                                                                                |
   | ---------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -341,3 +345,10 @@
   ```
 
   - `<datalist>` 中 `id` 值，須和 `<input>` 中 `list` 值相同
+
+## Table & Form 樣式
+
+<!-- TODO 後續新增 -->
+
+- Table 相關樣式設置
+- Form 和 Form Elements 的顯示外觀，會因不同瀏覽器而有所差異

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  padding: 15px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.flex-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+h2 {
+  border-bottom: 1px solid #000;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}

@@ -98,6 +98,8 @@
   </script>
   ```
 
+- `aria-*`
+
 - `role` - 用來定義各元素的角色 ( 大多有對應的元素可以直接使用 )
 
   | Value           | Definition                  | Related Element |
@@ -112,3 +114,31 @@
   | `contentinfo`   | 內容版權及隱私聲明相關連結  |   `<footer>`    |
 
   - 較常使用的為 `application`、`search`、`form`
+
+- `srcset` - 為 `<img>` 元素的新屬性，讓瀏覽器適應裝置尺寸、解析度顯示不同圖片
+
+  ```html
+  <!-- 按照畫面寬度使用不同圖片 -->
+  <img
+    src="img/small.jpg"
+    srcset="img/small.jpg 400w, img/medium.jpg 800w, img/large.jpg 1200w"
+    alt="..."
+  />
+
+  <!-- 按照解析度使用不同圖片 -->
+  <img
+    src="img/sample.jpg"
+    srcset="img/sample@2x.jpg 2x, img/sample@3x.jpg 3x"
+    alt="..."
+  />
+  ```
+
+- `image-set()` - 為 `background-image` 新屬性值，因應不同解析度顯示不同背景圖片
+
+  ```css
+  background-image: img-set(
+    url(img/bg.jpg) 1x,
+    url(img/bg@2x.jpg) 2x,
+    url(img/bg@3x.jpg) 3x
+  );
+  ```
