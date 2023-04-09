@@ -28,6 +28,41 @@ h2 {
   padding-bottom: 5px;
 }
 
+/* isolate */
+.isolate-wrapper {
+  height: 80px;
+  padding: 20px;
+  background-color: #797878;
+}
+
+.isolate-wrapper .content {
+  position: relative;
+  background-color: #7a85f9;
+  height: 100%;
+
+  /* TODO: Toggle to see result */
+  isolation: isolate;
+}
+
+.isolate-wrapper .content::after,
+.isolate-wrapper .content p {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.isolate-wrapper .content::after {
+  content: "";
+  width: 100px;
+  height: 30px;
+  background-color: #ffffff66;
+}
+
+.isolate-wrapper .content p {
+  color: #000000;
+  z-index: -1;
+}
+
 /* text-shadow */
 [class|="ts"] {
   background-color: #ccc;
