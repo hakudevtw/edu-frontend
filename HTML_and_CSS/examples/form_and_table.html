@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      table {
+        width: 50vw;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+
+      caption {
+        margin-bottom: 5px;
+      }
+
+      table th,
+      td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: center;
+      }
+
+      #math {
+        background-color: antiquewhite;
+      }
+
+      fieldset {
+        padding: 10px;
+      }
+
+      .form-control {
+        margin-bottom: 5px;
+      }
+
+      label {
+        display: inline-block;
+        width: 60px;
+      }
+
+      .demo-input input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Student Scores
+      </caption>
+      <colgroup id="name"></colgroup>
+      <colgroup id="math"></colgroup>
+      <colgroup id="english"></colgroup>
+      <colgroup id="science"></colgroup>
+
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Math</th>
+          <th scope="col">English</th>
+          <th scope="col">Science</th>
+        </tr>
+      </thead>
+
+      <!-- tfoot 必須放在 thead 下面 -->
+      <tfoot>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Math</th>
+          <th scope="col">English</th>
+          <th scope="col">Science</th>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <th scope="row">Jimmy</th>
+          <td>89</td>
+          <td>98</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <th scope="row">James</th>
+          <td>99</td>
+          <td>95</td>
+          <td>90</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption>
+        colspan (合併橫向儲存格)
+      </caption>
+      <tr>
+        <td colspan="3">1</td>
+        <!-- <td>2</td> -->
+        <!-- <td>3</td> -->
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </table>
+
+    <table>
+      <caption>
+        rowspan (合併縱向儲存格)
+      </caption>
+      <tr>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <!-- <td>4</td> -->
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </table>
+
+    <table>
+      <caption>
+        rowspan + colspan
+      </caption>
+      <tr>
+        <td colspan="2" rowspan="2">1</td>
+        <!-- <td>2</td> -->
+        <td>3</td>
+      </tr>
+      <tr>
+        <!-- <td>4</td> -->
+        <!-- <td>5</td> -->
+        <td>6</td>
+      </tr>
+    </table>
+
+    <form class="demo-input">
+      <input type="button" value="value" />
+      <input type="checkbox" />
+      <input type="color" />
+      <input type="date" />
+      <input type="datetime-local" />
+      <input type="email" />
+      <input type="file" />
+      <input type="hidden" />
+      <input type="image" />
+      <input type="month" />
+      <input type="number" />
+      <input type="password" />
+      <input type="radio" />
+      <input type="range" />
+      <input type="reset" />
+      <input type="search" />
+      <input type="submit" />
+      <input type="tel" />
+      <input type="text" />
+      <input type="time" />
+      <input type="url" />
+      <input type="week" />
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>申請人</legend>
+        <div class="form-control">
+          <label for="name">姓名</label>
+          <input type="text" id="name" />
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

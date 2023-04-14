@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  padding: 15px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.flex-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+h2 {
+  border-bottom: 1px solid #000;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+/* isolate */
+.isolate-wrapper {
+  height: 80px;
+  padding: 20px;
+  background-color: #797878;
+}
+
+.isolate-wrapper .content {
+  position: relative;
+  background-color: #7a85f9;
+  height: 100%;
+
+  /* TODO: Toggle to see result */
+  isolation: isolate;
+}
+
+.isolate-wrapper .content::after,
+.isolate-wrapper .content p {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.isolate-wrapper .content::after {
+  content: "";
+  width: 100px;
+  height: 30px;
+  background-color: #ffffff66;
+}
+
+.isolate-wrapper .content p {
+  color: #000000;
+  z-index: -1;
+}
+
+/* text-shadow */
+[class|="ts"] {
+  background-color: #ccc;
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
+.ts-1 {
+  text-shadow: 2px 2px 3px #999;
+}
+.ts-2 {
+  color: #fff;
+  text-shadow: 0 0 5px #797878;
+}
+.ts-3 {
+  color: #ccc;
+  text-shadow: -1px -1px 0 #fff, 1px 1px 0 #aaa;
+}
+.ts-4 {
+  color: #ccc;
+  text-shadow: -1px -1px 0 #aaa, 1px 1px 0 #fff;
+}
+.ts-5 {
+  color: #fff;
+  text-shadow: 1px 1px 0 #999, -1px 1px 0 #999, 1px -1px 0 #999,
+    -1px -1px 0 #999;
+}
+.ts-6 {
+  letter-spacing: 5px;
+  background-color: #000;
+  color: #7fc0f5;
+  text-shadow: 0 0 5px #fff, 0 0 13px rgb(123, 0, 255),
+    0 0 13px rgb(123, 0, 255), 0 0 13px rgb(123, 0, 255),
+    0 0 13px rgb(123, 0, 255), 0 0 13px rgb(123, 0, 255);
+}
+
+/* text-stroke */
+[class|="tst"] {
+  background-color: #fdc7ff;
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.tst-1 {
+  -webkit-text-stroke: 1px #000;
+}
+.tst-2 {
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* text-bg-clip */
+.clip {
+  font-size: 48px;
+  font-weight: bolder;
+  background: url(./bg.jpg) center center no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* border-radius */
+.radius.flex-box > div {
+  border: 1px solid #000;
+  background: #f4eaf8;
+}
+
+.bdr-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bdr-oval {
+  width: 80px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bdr-oval-structured {
+  width: 80px;
+  height: 50px;
+  border-radius: 50px / 20px;
+}
+
+.bdr-blob {
+  width: 80px;
+  height: 50px;
+  border-radius: 30% 60% 60% 50% / 80% 40% 70% 30%;
+}
+
+/* box-shadow */
+[class|="bs"] {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bs-1 {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bs-2 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bs-3 {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+.bs-4 {
+  box-shadow: 0 0 15px rgba(18, 154, 238, 0.5) inset;
+}
+
+.bs-5 {
+  box-shadow: 0 0 0 6px #83c8a7;
+}
+
+.bs-6 {
+  box-shadow: 0 0 0 3px #fff inset, 0 0 0 3px #fffa9a, 0 0 0 6px #9cc883;
+}
+
+/* background-size */
+[class|="bgs"] {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #000;
+  background: url(./bg.jpg) center center no-repeat;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+
+.bgs-contain {
+  background-size: contain;
+}
+
+.bgs-cover {
+  background-size: cover;
+}
+
+.bgs-percent {
+  background-size: 100% 100%;
+}
+
+/* gradient */
+[class|="lg"],
+[class|="rg"],
+[class|="rlg"],
+[class|="rrg"] {
+  height: 80px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.lg-1 {
+  background: linear-gradient(to bottom, #7a85f9, #fff);
+}
+
+.lg-2 {
+  background: linear-gradient(to right, #7a85f9 0%, #fff 50%, #a4f3da 100%);
+}
+
+.lg-3 {
+  background: linear-gradient(
+    to right bottom,
+    #7a85f9 0%,
+    #fff 50%,
+    #a4f3da 100%
+  );
+}
+
+.lg-4 {
+  background: linear-gradient(135deg, #7a85f9 0%, #fff 50%, #a4f3da 100%);
+}
+
+.rg-1 {
+  background: radial-gradient(circle, #fff, #7a85f9);
+}
+
+.rg-2 {
+  background: radial-gradient(closest-side, #fff, #7a85f9);
+}
+
+.rg-3 {
+  background: radial-gradient(at bottom, #fff, #7a85f9);
+}
+
+.rlg {
+  background: repeating-linear-gradient(
+    135deg,
+    #fff,
+    #fff 10px,
+    #fef 10px,
+    #fef 20px
+  );
+}
+
+.rrg {
+  background: repeating-radial-gradient(
+    circle farthest-side,
+    #fff 25%,
+    #fff 25%,
+    rgb(170, 217, 255) 35%,
+    #fff 50%
+  );
+}
+
+/* filter */
+[class|="ft"] {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #000;
+  background: url(./bg.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+
+.ft-grayscale {
+  filter: grayscale(100%);
+}
+.ft-sepia {
+  filter: sepia(100%);
+}
+.ft-contrast {
+  filter: contrast(150%);
+}
+.ft-brightness {
+  filter: brightness(50%);
+}
+.ft-saturate {
+  filter: saturate(50%);
+}
+.ft-hue-rotate {
+  filter: hue-rotate(45deg);
+}
+.ft-invert {
+  filter: invert(100%);
+}
+.ft-opacity {
+  filter: opacity(50%);
+}
+.ft-blur {
+  filter: blur(5px);
+}
+.ft-drop-shadow {
+  filter: drop-shadow(16px 16px 10px black);
+}
+
+.bft-bg {
+  padding: 10px;
+  background: url(./bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+[class|="bft"] {
+  flex-grow: 1;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #000;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+
+.bft-grayscale {
+  backdrop-filter: grayscale(100%);
+}
+.bft-sepia {
+  backdrop-filter: sepia(100%);
+}
+.bft-contrast {
+  backdrop-filter: contrast(150%);
+}
+.bft-brightness {
+  backdrop-filter: brightness(50%);
+}
+.bft-saturate {
+  backdrop-filter: saturate(50%);
+}
+.bft-hue-rotate {
+  backdrop-filter: hue-rotate(45deg);
+}
+.bft-invert {
+  backdrop-filter: invert(100%);
+}
+.bft-opacity {
+  backdrop-filter: opacity(90%);
+}
+.bft-blur {
+  backdrop-filter: blur(5px);
+}
+.bft-drop-shadow {
+  backdrop-filter: drop-shadow(16px 16px 10px black);
+}
