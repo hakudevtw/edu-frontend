@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.border-radius{
+    border-radius: 5%;
+}
+
+.main-header{
+    height: 80px;
+    margin-bottom: 50px;
+    background-color: rgb(14, 12, 12);
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.main-header > .logo{
+    float: left;
+}
+
+/* .navigation{
+    width: 100%;
+    padding: 10px 25px;
+
+} */
+
+.navigation > ul{
+    height: 100%;
+    list-style: none;
+    text-align: center;
+  
+}
+
+.navigation > ul >li{
+    float: right;
+    width: 80px;
+    margin-right: 10px;
+        
+    
+}
+
+.navigation > ul > li > a{
+    text-decoration: none;
+    display: block;
+    line-height: 80px;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    background-color: rgb(95, 95, 95);
+    color: black;
+}
+
+main{
+    margin: 30px;
+    height: 600px;
+}
+
+main> div> .new{
+    display: block;
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(225, 124, 124);
+    transform: rotate(-35deg);
+    position: absolute;
+    left: -85px;
+    top: 10px;
+    z-index: 1;
+}
+
+main > .card{
+    height: 330px;
+    width: calc((100% - 90px)/4);
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(202, 177, 177);
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.card:nth-child(4){
+    margin-right: 0px;
+}
+
+main > div > div{
+    overflow: hidden;
+}
+
+main > div > div > .transform:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    border-radius: 5%;
+    z-index: -1;
+}
+
+main > div > div > p{
+    margin: 10px;
+}
+
+main > div > div > .button{
+    padding: 5px;
+    margin-top: 5px;
+    border: solid 1px;
+    display: inline-block;
+}
+
+.button:hover{
+    background-color: rgb(29, 29, 29);
+    color: aliceblue;
+    border: solid #000 1px;
+}
