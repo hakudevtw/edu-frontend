@@ -42,6 +42,10 @@
         background-color: antiquewhite;
       }
 
+      #science {
+        background: linear-gradient(rgb(151, 151, 235), rgb(255, 199, 241));
+      }
+
       fieldset {
         padding: 10px;
       }
@@ -62,6 +66,15 @@
     </style>
   </head>
   <body>
+    <input list="browsers" />
+    <datalist id="browsers">
+      <option value="Internet Explorer"></option>
+      <option value="Firefox"></option>
+      <option value="Chrome"></option>
+      <option value="Opera"></option>
+      <option value="Safari"></option>
+    </datalist>
+    <a href="http://www.google.com" target="_blank">abc</a>
     <table>
       <caption>
         Student Scores
@@ -162,14 +175,13 @@
       <input type="datetime-local" />
       <input type="email" />
       <input type="file" />
-      <input type="hidden" />
+      <input type="hidden" value="acb@gmail.com" />
       <input type="image" />
       <input type="month" />
       <input type="number" />
       <input type="password" />
-      <input type="radio" />
       <input type="range" />
-      <input type="reset" />
+      <input type="reset" value="reset" />
       <input type="search" />
       <input type="submit" />
       <input type="tel" />

@@ -224,8 +224,8 @@
   | Attribute      | Definition                                       | Sample                                                                                              |
   | -------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
   | `value`        | 定義其初始值或顯示文字                           | `<input type="text" value="John" />`                                                                |
-  | `readonly`     | 加上後將欄位設為唯讀<br>-> 仍會被提交            | `<input type="text" disabled>`                                                                      |
-  | `disabled`     | 禁用此欄位，無法點選或輸入<br>-> 不會被提交      | `<input type="text" value="John" />`                                                                |
+  | `readonly`     | 加上後將欄位設為唯讀<br>-> 仍會被提交            | `<input type="text" readonly>`                                                                      |
+  | `disabled`     | 禁用此欄位，無法點選或輸入<br>-> 不會被提交      | `<input type="text" value="John" disabled/>`                                                        |
   | `size `        | 設置欄位寬度                                     | `<input type="text" size="50"/>`                                                                    |
   | `maxlength `   | 限制輸入字數                                     | `<input type="password" maxlength="8"/>`                                                            |
   | `min` & `max`  | 定義特定欄位的最大最小值                         | `<input type="date" max="1979-12-31" />`                                                            |
@@ -251,7 +251,7 @@
     </div>
     ```
 
-  - 若將 `<input>` 包進 `<label` 中，可以省略 `for`
+  - 若將 `<input>` 包進 `<label>` 中，可以省略 `for`
 
     ```html
     <!-- 可以用於一些特殊用途 (Ex. radio、checkbox) -->
